@@ -1,5 +1,5 @@
 require_relative "../config/environment.rb"
-
+require 'pry'
 class Student
 
   # Remember, you can access your database connection anywhere in this class
@@ -36,7 +36,8 @@ class Student
       INSERT INTO students (name, grade) 
       VALUES (?, ?)
     SQL
-
+    
+    
     DB[:conn].execute(sql, self.name, self.grade)
     
   end
